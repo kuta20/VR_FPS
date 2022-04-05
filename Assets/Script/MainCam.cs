@@ -23,10 +23,11 @@ public class MainCam : MonoBehaviour
         var verticalRotation = Input.GetAxis("Mouse Y") * angularVelocity * Time.deltaTime;
 
         horizontalAngle += horizontalRotation;
-        verticalAngle += verticalRotation;
+        verticalAngle += verticalRotation; 
 
         //horizontalAngle = Mathf.Clamp(horizontalAngle, -minAngle, maxAngle);
         verticalAngle = Mathf.Clamp(verticalAngle, minAngle, maxAngle);
         transform.rotation = Quaternion.Euler(-verticalAngle, horizontalAngle, 0);
+
     }
 }

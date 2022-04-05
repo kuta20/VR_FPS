@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public GameObject bulletPrefabs; //총구
-    public Transform gunBurrelEnd; //총구
+    public GameObject bulletPrefabs; 
+    public Transform gunBurrelEnd; 
 
 
     // Start is called before the first frame update
