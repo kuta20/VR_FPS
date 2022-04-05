@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-    public float spawnInterval = 3f; // 적 출현 간격
+    public float spawnInterval = 1f; // 적 출현 간격
 
-    EnemySpawner[] spawners;
-    float timer = 1f; // 출현 시간 판정용 타이머 변수
+    EnemySpawner[] spawners; //적 출현 리스트 
+    float timer = 0f; // 출현 시간 판정용 타이머 변수
 
     // Start is called before the first frame update
     void Start()

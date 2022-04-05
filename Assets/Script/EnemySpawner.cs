@@ -6,7 +6,9 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy enemyPrefab;
 
+
     Enemy enemy; //출현 중인 적 보유
+    
 
     public void Spawn()
     {
