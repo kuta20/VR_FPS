@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject EnemyPrefab; // 적 프리팹 변수
 
     public float createTime; // 생성시간
-    public int maxEnemy = 5; // 최대 적 개수
+    private int maxEnemy = 5; // 최대 적 개수
     public bool isGameOver = false;
 
     // Start is called before the first frame update
@@ -21,6 +21,8 @@ public class EnemySpawn : MonoBehaviour
         {
             StartCoroutine(this.CreateEnemy());
         }
+       
+        
     }
 
     // Update is called once per frame
@@ -42,8 +44,7 @@ public class EnemySpawn : MonoBehaviour
                 int idx = Random.Range(1, EnemySpawner.Length); // 랜덤 위치 
 
                 // 스폰
-                Instantiate(EnemyPrefab, EnemySpawner[idx].position, 
-                                EnemySpawner[idx].rotation);
+                Instantiate(EnemyPrefab, EnemySpawner[idx].position,EnemySpawner[idx].rotation);
             }else
             {
                 yield return null;

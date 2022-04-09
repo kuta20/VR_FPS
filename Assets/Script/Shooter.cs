@@ -5,8 +5,10 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject bulletPrefabs; 
-    public Transform gunBurrelEnd; 
+    public Transform gunBurrelEnd;
 
+    [SerializeField] ParticleSystem gunEffect;
+    [SerializeField] AudioSource gunAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +28,8 @@ public class Shooter : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefabs, gunBurrelEnd.position, gunBurrelEnd.rotation);
+
+        gunEffect.Play();
+        gunAudioSource.Play();
     }
 }

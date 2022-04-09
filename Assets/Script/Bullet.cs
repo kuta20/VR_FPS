@@ -5,10 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
+
+    [SerializeField] ParticleSystem hitEffect;
     // Start is called before the first frame update
 
     // 총알 제거 시간 
-    private float lifetime = 1f;
+    [SerializeField]private float lifetime = 1f;
     void Start()
     {
         // 앞쪽 방향의 속도 벡터 계산
